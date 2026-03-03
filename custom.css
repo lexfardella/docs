@@ -1,711 +1,84 @@
-/* ================================================================
-   DESIGN IQ CUSTOM STYLES FOR MINTLIFY DOCUMENTATION
-   ================================================================
-   This CSS file replicates the engineering-ai app design system:
-   - Inter font (body), Saira font (branding)
-   - Gray-scale color palette with purple accents (#7C3AED)
-   - Minimal scrollbars
-   - Typography: 14px base, tight letter-spacing
-   - Light/dark mode support
-   ================================================================ */
+/* DESIGN IQ CUSTOM STYLES */
 
-/* ================================================================
-   FONT IMPORTS
-   ================================================================ */
+/* Font Imports */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Saira:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira:wght@600&display=swap');
 
-/* ================================================================
-   CSS RESET & BASE STYLES
-   ================================================================ */
-* {
-  box-sizing: border-box;
-}
-
-html {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* ================================================================
-   CSS VARIABLES (Light Mode)
-   ================================================================ */
+/* CSS Variables */
 :root {
-  /* Fonts */
-  --font-inter: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-inter: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-saira: 'Saira', sans-serif;
-
-  /* Gray scale colors */
-  --gray-50: #F9FAFB;
-  --gray-100: #F3F4F6;
-  --gray-200: #E5E7EB;
-  --gray-300: #D1D5DB;
-  --gray-400: #9CA3AF;
-  --gray-500: #6B7280;
-  --gray-600: #4B5563;
-  --gray-700: #374151;
-  --gray-800: #1F2937;
-  --gray-900: #111827;
-  --gray-950: #0A0A0A;
-
-  /* Purple accents */
-  --purple-50: #FAF5FF;
-  --purple-100: #F3E8FF;
-  --purple-200: #E9D5FF;
-  --purple-300: #D8B4FE;
-  --purple-400: #C084FC;
-  --purple-500: #A855F7;
-  --purple-600: #9333EA;
-  --purple-700: #7C3AED;
-  --purple-800: #6D28D9;
-  --purple-900: #5B21B6;
-
-  /* Semantic colors */
-  --bg-primary: #FFFFFF;
-  --bg-secondary: var(--gray-50);
-  --bg-tertiary: var(--gray-100);
-  --text-primary: var(--gray-900);
-  --text-secondary: var(--gray-600);
-  --text-tertiary: var(--gray-500);
-  --border-color: var(--gray-200);
-  --border-light: var(--gray-100);
-  --accent: var(--purple-700);
-  --accent-hover: var(--purple-800);
 }
 
-/* ================================================================
-   CSS VARIABLES (Dark Mode)
-   ================================================================ */
-.dark,
-[data-theme="dark"] {
-  --bg-primary: #0A0A0A;
-  --bg-secondary: #050505;
-  --bg-tertiary: #111111;
-  --text-primary: #FFFFFF;
-  --text-secondary: #9CA3AF;
-  --text-tertiary: #6B7280;
-  --border-color: #1F2937;
-  --border-light: #111827;
-  --accent: var(--purple-600);
-  --accent-hover: var(--purple-500);
-}
-
-/* ================================================================
-   TYPOGRAPHY OVERRIDES
-   ================================================================ */
+/* Base Typography */
 body {
-  font-family: var(--font-inter) !important;
-  font-size: 14px !important;
-  line-height: 1.6 !important;
-  color: var(--text-primary) !important;
-  background-color: var(--bg-secondary) !important;
+  font-family: var(--font-inter);
+  font-size: 14px;
+  line-height: 1.6;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-inter) !important;
-  font-weight: 600 !important;
-  letter-spacing: -0.02em !important;
-  color: var(--text-primary) !important;
+  font-family: var(--font-inter);
+  font-weight: 600;
+  letter-spacing: -0.02em;
 }
 
-h1 {
-  font-size: 2rem !important;
-  line-height: 1.2 !important;
-  letter-spacing: -0.03em !important;
+/* Logo Branding */
+[class*="logo"],
+.navbar-brand {
+  font-family: var(--font-saira);
+  font-weight: 600;
+  letter-spacing: -0.02em;
 }
 
-h2 {
-  font-size: 1.5rem !important;
-  line-height: 1.3 !important;
+/* Buttons */
+button,
+.button {
+  font-family: var(--font-inter);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 6px 40px;
+  border-radius: 9999px;
+  transition: all 0.2s ease;
 }
 
-h3 {
-  font-size: 1.25rem !important;
-  line-height: 1.4 !important;
-}
-
-h4 {
-  font-size: 1rem !important;
-  line-height: 1.5 !important;
-}
-
-p {
-  font-size: 14px !important;
-  line-height: 1.6 !important;
-  color: var(--text-secondary) !important;
-}
-
+/* Links */
 a {
-  color: var(--accent) !important;
-  text-decoration: none !important;
-  transition: color 0.2s ease !important;
+  transition: color 0.2s ease;
 }
 
-a:hover {
-  color: var(--accent-hover) !important;
-}
-
+/* Code */
 code {
-  font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Courier New', monospace !important;
-  font-size: 13px !important;
-  background-color: var(--gray-100) !important;
-  padding: 2px 6px !important;
-  border-radius: 4px !important;
-  border: 1px solid var(--border-light) !important;
-}
-
-.dark code {
-  background-color: var(--gray-900) !important;
-  border-color: var(--border-color) !important;
+  font-size: 13px;
+  border-radius: 4px;
+  padding: 2px 6px;
 }
 
 pre {
-  background-color: var(--gray-50) !important;
-  border: 1px solid var(--border-color) !important;
-  border-radius: 8px !important;
-  padding: 16px !important;
-  overflow-x: auto !important;
-  font-size: 13px !important;
+  border-radius: 8px;
+  padding: 16px;
 }
 
-.dark pre {
-  background-color: var(--bg-tertiary) !important;
-}
-
-/* ================================================================
-   LOGO & BRANDING (Saira font for "DESIGN IQ")
-   ================================================================ */
-[class*="logo"],
-.navbar-brand,
-.site-title {
-  font-family: var(--font-saira) !important;
-  font-weight: 600 !important;
-  font-size: 18px !important;
-  letter-spacing: -0.02em !important;
-  color: var(--text-primary) !important;
-}
-
-/* ================================================================
-   LAYOUT & CONTAINERS
-   ================================================================ */
-.container,
-.content-wrapper,
-[class*="max-w"] {
-  max-width: 80rem !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  padding-left: 24px !important;
-  padding-right: 24px !important;
-}
-
-/* ================================================================
-   NAVBAR STYLES (matching NavBarSimple.tsx)
-   ================================================================ */
-nav,
-.navbar,
-[class*="nav"] {
-  background-color: rgba(249, 250, 251, 0.95) !important;
-  backdrop-filter: blur(8px) !important;
-  border-bottom: 1px solid var(--border-light) !important;
-  height: 56px !important;
-  position: fixed !important;
-  top: 0 !important;
-  left: 0 !important;
-  right: 0 !important;
-  z-index: 40 !important;
-}
-
-.dark nav,
-.dark .navbar {
-  background-color: rgba(10, 10, 10, 0.95) !important;
-}
-
-.navbar a {
-  font-size: 14px !important;
-  font-weight: 500 !important;
-  color: var(--text-secondary) !important;
-  transition: color 0.2s ease !important;
-}
-
-.navbar a:hover {
-  color: var(--text-primary) !important;
-}
-
-/* ================================================================
-   SIDEBAR STYLES (matching Sidebar.tsx patterns)
-   ================================================================ */
-.sidebar,
-aside,
-[class*="sidebar"] {
-  background-color: var(--bg-secondary) !important;
-  border-right: 1px solid var(--border-color) !important;
-  width: 240px !important;
-  min-height: 100vh !important;
-}
-
-.dark .sidebar,
-.dark aside {
-  background-color: var(--bg-primary) !important;
-}
-
-/* Sidebar navigation items */
-.sidebar a,
-.sidebar button,
-.sidebar [class*="nav-item"] {
-  font-size: 12px !important;
-  font-weight: 500 !important;
-  color: var(--text-secondary) !important;
-  padding: 8px 12px !important;
-  border-radius: 6px !important;
-  transition: all 0.2s ease !important;
-  display: flex !important;
-  align-items: center !important;
-  gap: 8px !important;
-}
-
-.sidebar a:hover,
-.sidebar button:hover,
-.sidebar [class*="nav-item"]:hover {
-  background-color: var(--gray-100) !important;
-  color: var(--text-primary) !important;
-}
-
-.dark .sidebar a:hover,
-.dark .sidebar button:hover {
-  background-color: var(--gray-800) !important;
-}
-
-/* Active sidebar item */
-.sidebar a.active,
-.sidebar button.active,
-.sidebar [class*="nav-item"].active {
-  background-color: var(--gray-200) !important;
-  color: var(--text-primary) !important;
-  font-weight: 600 !important;
-}
-
-.dark .sidebar a.active,
-.dark .sidebar button.active {
-  background-color: var(--gray-800) !important;
-}
-
-/* ================================================================
-   BUTTONS (matching landing page and component patterns)
-   ================================================================ */
-button,
-.button,
-[class*="btn"] {
-  font-family: var(--font-inter) !important;
-  font-size: 14px !important;
-  font-weight: 500 !important;
-  padding: 6px 40px !important;
-  border-radius: 9999px !important;
-  transition: all 0.2s ease !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  gap: 8px !important;
-}
-
-/* Primary button (black background) */
-button.primary,
-.button-primary,
-[class*="btn-primary"] {
-  background-color: #000000 !important;
-  color: #FFFFFF !important;
-  border: none !important;
-}
-
-button.primary:hover,
-.button-primary:hover,
-[class*="btn-primary"]:hover {
-  background-color: var(--gray-900) !important;
-  transform: scale(1.02) !important;
-}
-
-/* Secondary button (bordered) */
-button.secondary,
-.button-secondary,
-[class*="btn-secondary"] {
-  background-color: transparent !important;
-  color: var(--text-primary) !important;
-  border: 1px solid var(--gray-300) !important;
-}
-
-button.secondary:hover,
-.button-secondary:hover,
-[class*="btn-secondary"]:hover {
-  border-color: var(--gray-400) !important;
-  transform: scale(1.02) !important;
-}
-
-/* Small buttons */
-button.small,
-.button-small {
-  font-size: 12px !important;
-  padding: 4px 16px !important;
-}
-
-/* ================================================================
-   CARDS & PANELS (matching component patterns)
-   ================================================================ */
-.card,
-[class*="card"],
-.panel {
-  background-color: var(--bg-primary) !important;
-  border: 1px solid var(--border-color) !important;
-  border-radius: 8px !important;
-  padding: 16px !important;
-  transition: all 0.2s ease !important;
-}
-
-.card:hover,
-[class*="card"]:hover {
-  border-color: var(--gray-300) !important;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05) !important;
-}
-
-.dark .card:hover {
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
-}
-
-/* ================================================================
-   SCROLLBAR STYLES (minimal-scrollbar-default from globals.css)
-   ================================================================ */
+/* Minimal Scrollbars */
 ::-webkit-scrollbar {
-  width: 8px !important;
-  height: 8px !important;
+  width: 8px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: transparent !important;
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: transparent !important;
-  border-radius: 4px !important;
-  transition: background 0.2s ease !important;
+  background: transparent;
+  border-radius: 4px;
+  transition: background 0.2s ease;
 }
 
 *:hover::-webkit-scrollbar-thumb {
-  background: var(--gray-300) !important;
+  background: rgba(209, 213, 219, 0.5);
 }
 
 .dark *:hover::-webkit-scrollbar-thumb {
-  background: var(--gray-700) !important;
+  background: rgba(75, 85, 99, 0.5);
 }
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--gray-400) !important;
-}
-
-.dark ::-webkit-scrollbar-thumb:hover {
-  background: var(--gray-600) !important;
-}
-
-/* Firefox scrollbar */
-* {
-  scrollbar-width: thin !important;
-  scrollbar-color: transparent transparent !important;
-}
-
-*:hover {
-  scrollbar-color: var(--gray-300) transparent !important;
-}
-
-.dark *:hover {
-  scrollbar-color: var(--gray-700) transparent !important;
-}
-
-/* ================================================================
-   ANIMATIONS (heroGlow from globals.css)
-   ================================================================ */
-@keyframes heroGlow {
-  0%, 100% {
-    opacity: 0.4;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.6;
-    transform: scale(1.05);
-  }
-}
-
-.glow-animation {
-  animation: heroGlow 8s ease-in-out infinite !important;
-}
-
-/* ================================================================
-   PURPLE ACCENT ELEMENTS (matching purple references in components)
-   ================================================================ */
-.accent,
-[class*="accent"] {
-  color: var(--accent) !important;
-}
-
-.accent-bg {
-  background-color: var(--accent) !important;
-  color: white !important;
-}
-
-.accent-border {
-  border-color: var(--accent) !important;
-}
-
-/* Reference chips (like InlineRefChip in ReviewAgent.tsx) */
-.reference-chip,
-[class*="ref-chip"] {
-  background-color: rgba(124, 58, 237, 0.08) !important;
-  color: var(--purple-700) !important;
-  border: 1px solid rgba(124, 58, 237, 0.2) !important;
-  padding: 4px 8px !important;
-  border-radius: 6px !important;
-  font-size: 10px !important;
-  font-weight: 500 !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  gap: 4px !important;
-  transition: all 0.2s ease !important;
-}
-
-.reference-chip:hover {
-  background-color: rgba(124, 58, 237, 0.12) !important;
-  border-color: rgba(124, 58, 237, 0.3) !important;
-}
-
-.dark .reference-chip {
-  background-color: rgba(124, 58, 237, 0.15) !important;
-  color: var(--purple-400) !important;
-  border-color: rgba(124, 58, 237, 0.4) !important;
-}
-
-/* ================================================================
-   TABLES
-   ================================================================ */
-table {
-  width: 100% !important;
-  border-collapse: collapse !important;
-  font-size: 14px !important;
-}
-
-thead {
-  background-color: var(--bg-tertiary) !important;
-}
-
-th {
-  padding: 12px 16px !important;
-  text-align: left !important;
-  font-weight: 600 !important;
-  color: var(--text-primary) !important;
-  border-bottom: 2px solid var(--border-color) !important;
-}
-
-td {
-  padding: 12px 16px !important;
-  color: var(--text-secondary) !important;
-  border-bottom: 1px solid var(--border-light) !important;
-}
-
-tr:hover {
-  background-color: var(--bg-secondary) !important;
-}
-
-/* ================================================================
-   CODE BLOCKS & SYNTAX HIGHLIGHTING
-   ================================================================ */
-pre code {
-  background: none !important;
-  padding: 0 !important;
-  border: none !important;
-  font-size: 13px !important;
-  line-height: 1.6 !important;
-}
-
-.hljs {
-  background: var(--gray-50) !important;
-}
-
-.dark .hljs {
-  background: var(--bg-tertiary) !important;
-}
-
-/* ================================================================
-   SEARCH BAR
-   ================================================================ */
-input[type="search"],
-.search-input {
-  background-color: var(--bg-primary) !important;
-  border: 1px solid var(--border-color) !important;
-  border-radius: 8px !important;
-  padding: 8px 36px 8px 12px !important;
-  font-size: 14px !important;
-  color: var(--text-primary) !important;
-  transition: all 0.2s ease !important;
-}
-
-input[type="search"]:focus,
-.search-input:focus {
-  outline: none !important;
-  border-color: var(--accent) !important;
-  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1) !important;
-}
-
-input[type="search"]::placeholder,
-.search-input::placeholder {
-  color: var(--text-tertiary) !important;
-}
-
-/* ================================================================
-   BREADCRUMBS
-   ================================================================ */
-.breadcrumb,
-[class*="breadcrumb"] {
-  font-size: 12px !important;
-  color: var(--text-tertiary) !important;
-  display: flex !important;
-  align-items: center !important;
-  gap: 8px !important;
-}
-
-.breadcrumb a {
-  color: var(--text-secondary) !important;
-}
-
-.breadcrumb a:hover {
-  color: var(--text-primary) !important;
-}
-
-/* ================================================================
-   BADGES & TAGS
-   ================================================================ */
-.badge,
-.tag,
-[class*="badge"] {
-  display: inline-flex !important;
-  align-items: center !important;
-  padding: 4px 10px !important;
-  border-radius: 9999px !important;
-  font-size: 11px !important;
-  font-weight: 500 !important;
-  background-color: var(--gray-100) !important;
-  color: var(--text-secondary) !important;
-  border: 1px solid var(--border-light) !important;
-}
-
-.dark .badge,
-.dark .tag {
-  background-color: var(--gray-800) !important;
-  border-color: var(--border-color) !important;
-}
-
-/* ================================================================
-   ALERTS & CALLOUTS
-   ================================================================ */
-.alert,
-.callout,
-[class*="alert"] {
-  padding: 12px 16px !important;
-  border-radius: 8px !important;
-  border-left: 4px solid !important;
-  font-size: 14px !important;
-  margin: 16px 0 !important;
-}
-
-.alert-info,
-.callout-info {
-  background-color: rgba(59, 130, 246, 0.1) !important;
-  border-color: #3B82F6 !important;
-  color: #1E40AF !important;
-}
-
-.alert-success {
-  background-color: rgba(16, 185, 129, 0.1) !important;
-  border-color: #10B981 !important;
-  color: #065F46 !important;
-}
-
-.alert-warning {
-  background-color: rgba(245, 158, 11, 0.1) !important;
-  border-color: #F59E0B !important;
-  color: #92400E !important;
-}
-
-.alert-error {
-  background-color: rgba(239, 68, 68, 0.1) !important;
-  border-color: #EF4444 !important;
-  color: #991B1B !important;
-}
-
-/* ================================================================
-   FOOTER
-   ================================================================ */
-footer {
-  background-color: var(--bg-secondary) !important;
-  border-top: 1px solid var(--border-color) !important;
-  padding: 32px 24px !important;
-  font-size: 13px !important;
-  color: var(--text-tertiary) !important;
-}
-
-footer a {
-  color: var(--text-secondary) !important;
-}
-
-footer a:hover {
-  color: var(--text-primary) !important;
-}
-
-/* ================================================================
-   RESPONSIVE ADJUSTMENTS
-   ================================================================ */
-@media (max-width: 768px) {
-  .sidebar,
-  aside {
-    width: 60px !important;
-  }
-
-  .container,
-  .content-wrapper {
-    padding-left: 16px !important;
-    padding-right: 16px !important;
-  }
-
-  h1 {
-    font-size: 1.75rem !important;
-  }
-
-  h2 {
-    font-size: 1.25rem !important;
-  }
-
-  button,
-  .button {
-    padding: 6px 24px !important;
-  }
-}
-
-/* ================================================================
-   UTILITY CLASSES
-   ================================================================ */
-.text-xs { font-size: 12px !important; }
-.text-sm { font-size: 14px !important; }
-.text-base { font-size: 16px !important; }
-.text-lg { font-size: 18px !important; }
-.text-xl { font-size: 20px !important; }
-
-.font-normal { font-weight: 400 !important; }
-.font-medium { font-weight: 500 !important; }
-.font-semibold { font-weight: 600 !important; }
-.font-bold { font-weight: 700 !important; }
-
-.tracking-tight { letter-spacing: -0.02em !important; }
-.tracking-tighter { letter-spacing: -0.04em !important; }
-
-.rounded { border-radius: 6px !important; }
-.rounded-lg { border-radius: 8px !important; }
-.rounded-xl { border-radius: 12px !important; }
-.rounded-full { border-radius: 9999px !important; }
-
-/* ================================================================
-   END OF CUSTOM STYLES
-   ================================================================ */
