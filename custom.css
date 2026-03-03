@@ -23,12 +23,16 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -0.02em;
 }
 
-/* Logo Branding */
+/* Logo Branding - matching NavBarSimple.tsx */
 [class*="logo"],
-.navbar-brand {
-  font-family: var(--font-saira);
-  font-weight: 600;
-  letter-spacing: -0.02em;
+.navbar-brand,
+nav a[href="/"],
+.site-title {
+  font-family: var(--font-saira) !important;
+  font-weight: 600 !important;
+  font-size: 16px !important;
+  letter-spacing: -0.025em !important;
+  line-height: 1 !important;
 }
 
 /* Buttons */
