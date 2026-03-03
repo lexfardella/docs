@@ -2,7 +2,7 @@
 
 /* Font Imports */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Saira:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 /* CSS Variables */
 :root {
@@ -24,15 +24,28 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Logo Branding - matching NavBarSimple.tsx */
+/* Target all possible logo selectors in Mintlify */
 [class*="logo"],
+[class*="Logo"],
 .navbar-brand,
 nav a[href="/"],
-.site-title {
-  font-family: var(--font-saira) !important;
+nav a[href=""] img,
+.site-title,
+header a[href="/"],
+header a:first-child,
+a[aria-label*="home" i],
+a[aria-label*="logo" i] {
+  font-family: 'Saira', sans-serif !important;
   font-weight: 600 !important;
   font-size: 16px !important;
   letter-spacing: -0.025em !important;
   line-height: 1 !important;
+}
+
+/* Force Saira on SVG text if logo is SVG-based */
+svg text {
+  font-family: 'Saira', sans-serif !important;
+  font-weight: 600 !important;
 }
 
 /* Buttons */
