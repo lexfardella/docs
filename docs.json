@@ -4,6 +4,11 @@
   "favicon": "/favicon.svg",
   "theme": "luma",
   "customCss": "/custom.css",
+  "colors": {
+    "primary": "#7C3AED",
+    "light": "#A78BFA",
+    "dark": "#6D28D9"
+  },
   "navigation": {
     "tabs": [
       {
