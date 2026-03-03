@@ -11,6 +11,60 @@
   "navigation": {
     "tabs": [
       {
+        "tab": "Dashboard",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": [
+              "dashboard/overview",
+              "dashboard/getting-started"
+            ]
+          },
+          {
+            "group": "Projects",
+            "pages": [
+              "dashboard/projects/index",
+              "dashboard/projects/creating-projects",
+              "dashboard/projects/project-structure",
+              "dashboard/projects/settings-permissions"
+            ]
+          },
+          {
+            "group": "Data",
+            "pages": [
+              "dashboard/data/index",
+              "dashboard/data/organization-documents",
+              "dashboard/data/project-documents",
+              "dashboard/data/uploading-documents",
+              "dashboard/data/document-formats"
+            ]
+          },
+          {
+            "group": "Workflows",
+            "pages": [
+              "dashboard/workflows/index",
+              "dashboard/workflows/creating-workflows",
+              "dashboard/workflows/workflow-items",
+              "dashboard/workflows/categories-tags",
+              "dashboard/workflows/running-workflows",
+              "dashboard/workflows/workflow-page"
+            ]
+          },
+          {
+            "group": "Results",
+            "pages": [
+              "dashboard/results/index",
+              "dashboard/results/review-interface",
+              "dashboard/results/working-with-findings",
+              "dashboard/results/severity-levels",
+              "dashboard/results/responding-to-findings",
+              "dashboard/results/filtering-searching",
+              "dashboard/results/exporting-results"
+            ]
+          }
+        ]
+      },
+      {
         "tab": "Guides",
         "groups": [
           {

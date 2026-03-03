@@ -1,0 +1,141 @@
+---
+title: "Document Formats"
+description: "Supported file types and format recommendations"
+icon: "file"
+---
+
+## Supported Formats
+
+Design IQ supports common document formats used in engineering and design work.
+
+## Primary Formats
+
+<CardGroup cols={3}>
+  <Card title="PDF" icon="file-pdf">
+    Portable Document Format - recommended for best results
+  </Card>
+  <Card title="Excel" icon="file-excel">
+    Spreadsheets for calculations and data
+  </Card>
+  <Card title="Word" icon="file-word">
+    Specifications and text documents
+  </Card>
+</CardGroup>
+
+## PDF Documents
+
+PDFs are the preferred format for Design IQ. They work well for:
+
+- Design drawings
+- Specifications
+- Reports
+- Reference standards
+- Building codes
+
+### PDF Best Practices
+
+<Check>
+**Text-searchable PDFs** - Ensure PDFs contain selectable text, not just images
+</Check>
+
+<Check>
+**Native PDFs** - Export PDFs directly from design software when possible (not scanned)
+</Check>
+
+<Check>
+**OCR for scans** - If you must use scanned documents, apply OCR (Optical Character Recognition) first
+</Check>
+
+<Check>
+**Reasonable file sizes** - Compress large PDFs while maintaining quality
+</Check>
+
+## Excel Documents
+
+Excel files are useful for:
+- Calculation sheets
+- Data tables
+- Load schedules
+- Equipment lists
+
+Design IQ can extract and analyze data from Excel spreadsheets.
+
+## Word Documents
+
+Word files work well for:
+- Specification sections
+- Technical narratives
+- Design reports
+- Meeting notes
+
+## Image Files
+
+While PDFs are preferred, some image formats may be supported:
+- PNG
+- JPG/JPEG
+
+<Note>
+Image files should be high resolution and clear for best AI analysis. PDFs containing images are generally preferred over standalone image files.
+</Note>
+
+## Unsupported Formats
+
+The following formats are typically **not supported**:
+
+- CAD files (.dwg, .dxf, .rvt) - Export to PDF instead
+- 3D models - Export sections or views to PDF
+- Proprietary formats specific to certain software
+- Compressed archives (.zip, .rar) - Extract and upload files individually
+
+<Tip>
+If you have CAD or BIM files, export them to PDF with your design software before uploading to Design IQ.
+</Tip>
+
+## File Naming Conventions
+
+Good file naming helps with organization and retrieval:
+
+### Recommended Naming
+```
+[ProjectCode]_[DocumentType]_[Description]_[Version].pdf
+```
+
+### Examples
+- `BLDGA_STRUCT_Drawings_R2.pdf`
+- `CAMPUS_MEP_Specifications_Final.pdf`
+- `BRIDGE_CALC_LoadAnalysis_v3.xlsx`
+
+### Avoid
+- Generic names like `Document1.pdf`
+- Special characters that might cause issues (`, *, :, etc.)
+- Extremely long filenames
+
+## File Size Considerations
+
+### Optimal Sizes
+- Individual files: Under 50 MB for best performance
+- Very large files may take longer to process
+
+### Large File Handling
+If you have large files:
+1. Consider splitting into logical sections
+2. Compress PDFs while maintaining quality
+3. Remove unnecessary embedded content
+4. Contact support for guidance on very large uploads
+
+## Format Recommendations by Document Type
+
+| Document Type | Recommended Format | Alternative |
+|--------------|-------------------|-------------|
+| Drawings | PDF (from CAD) | - |
+| Specifications | PDF or Word | - |
+| Calculations | Excel or PDF | - |
+| Reports | PDF | Word |
+| Standards | PDF | - |
+| Photos/Images | PDF with images | PNG/JPG |
+
+## Next Steps
+
+<Card title="Upload Documents" icon="upload" href="/dashboard/data/uploading-documents">
+  Start uploading your documents
+</Card>

@@ -1,0 +1,201 @@
+---
+title: "Working with Findings"
+description: "Analyze and respond to AI-generated review findings"
+icon: "search"
+---
+
+## Understanding Findings
+
+Each finding represents the AI's analysis of a specific workflow item against your documents. Findings include:
+
+- **Workflow Item** - The original question or requirement
+- **Severity** - Critical, Major, Warning, Pass, or Inconclusive
+- **Explanation** - Detailed reasoning from the AI
+- **Document References** - Links to specific pages in your documents
+- **Response Area** - Where you provide your input
+
+## Analyzing a Finding
+
+<Steps>
+  <Step title="Read the Workflow Item">
+    Understand what was being checked.
+  </Step>
+  <Step title="Review the Severity">
+    Note whether it's Critical, Major, Warning, Pass, or Inconclusive.
+  </Step>
+  <Step title="Read the AI's Explanation">
+    Understand why the AI assigned this severity.
+  </Step>
+  <Step title="Check Document References">
+    Click reference chips to view the specific pages the AI analyzed.
+  </Step>
+  <Step title="Verify the Finding">
+    Determine if the AI's assessment is accurate.
+  </Step>
+  <Step title="Formulate Your Response">
+    Decide what action is needed or provide clarification.
+  </Step>
+</Steps>
+
+[SCREENSHOT PLACEHOLDER: Finding detail showing all components - item, severity, explanation, references]
+
+## Types of Findings
+
+### Critical Issues
+Findings that indicate serious problems requiring immediate attention:
+- Code violations
+- Safety concerns
+- Structural inadequacies
+- Missing required elements
+
+**Example:**
+```
+Item: Verify that all exit doors are minimum 36 inches wide
+Severity: Critical
+Finding: Exit door D-101 is shown as 32 inches wide on
+drawing A-101, which does not meet IBC 1010.1.1 minimum
+requirement of 36 inches.
+References: [Drawing A-101, p.5]
+```
+
+### Major Issues
+Significant problems that should be addressed:
+- Design inconsistencies
+- Calculation errors
+- Specification conflicts
+- Incomplete information
+
+### Warnings
+Items to review and consider:
+- Potential optimizations
+- Best practice suggestions
+- Unclear requirements
+- Possible improvements
+
+### Pass
+Items that meet requirements:
+- Confirmed compliance
+- Proper specifications
+- Adequate calculations
+- Complete documentation
+
+### Inconclusive
+Items where the AI couldn't determine compliance:
+- Insufficient information in documents
+- Ambiguous requirements
+- Missing reference documents
+- Complex interdependencies
+
+## Verifying Findings
+
+### Check the References
+Always click document reference chips to view the specific content the AI analyzed.
+
+### Confirm the AI's Interpretation
+Verify that:
+- The AI correctly identified the relevant requirement
+- The AI accurately read the document content
+- The severity is appropriate
+- The finding is actually an issue
+
+### False Positives
+Sometimes the AI may flag items that aren't actually problems:
+- The information exists elsewhere in the documents
+- The requirement doesn't apply to this project
+- The AI misinterpreted the content
+
+<Tip>
+If you find a false positive, provide a clear response explaining why it's not an issue. This helps improve future reviews.
+</Tip>
+
+## Document Reference Navigation
+
+### Clicking References
+Click any document reference chip to:
+1. Open the reference panel
+2. View the specific document and page
+3. See the context around the AI's observation
+
+### Multiple References
+Some findings reference multiple documents or pages. Click each reference to see all relevant context.
+
+### Page Numbers
+References include page numbers when available, making it easy to find the exact location in large documents.
+
+[SCREENSHOT PLACEHOLDER: Document reference panel showing PDF with highlighted section]
+
+## Prioritizing Findings
+
+### By Severity
+Address findings in order of severity:
+1. **Critical** - Immediate action required
+2. **Major** - Should be addressed soon
+3. **Warning** - Review and consider
+4. **Inconclusive** - Investigate further
+5. **Pass** - No action needed (optional to review)
+
+### By Category
+Focus on specific disciplines or areas:
+- Review all Structural findings first
+- Then Mechanical, Electrical, etc.
+- Or prioritize based on project needs
+
+### By Status
+Use status filters to:
+- See only pending (unresponded) items
+- Focus on what still needs attention
+- Review completed responses
+
+## Collaborative Review
+
+### Team Review
+For large reviews, divide findings among team members:
+- Structural engineer reviews structural findings
+- MEP engineer reviews MEP findings
+- Each provides responses in their area
+
+### Review Meetings
+Use the findings as agenda items for design review meetings:
+- Display findings on screen
+- Discuss as a team
+- Document decisions in responses
+
+### Client Reviews
+Share results and responses with clients:
+- Export to Excel
+- Highlight critical items
+- Show how issues are being addressed
+
+## Best Practices
+
+<AccordionGroup>
+  <Accordion title="Start with Critical Items">
+    Always address Critical and Major findings first - these represent the highest-risk issues.
+  </Accordion>
+  <Accordion title="Verify Before Responding">
+    Check document references to confirm the AI's observations before writing your response.
+  </Accordion>
+  <Accordion title="Be Thorough but Efficient">
+    Provide adequate detail in responses, but don't spend excessive time on items marked as "Pass."
+  </Accordion>
+  <Accordion title="Document Decisions">
+    Use responses to create a record of design decisions and justifications.
+  </Accordion>
+  <Accordion title="Iterate">
+    After addressing findings, consider re-running the workflow on updated documents to verify fixes.
+  </Accordion>
+</AccordionGroup>
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Severity Levels" icon="signal" href="/dashboard/results/severity-levels">
+    Detailed descriptions of each severity level
+  </Card>
+  <Card title="Responding to Findings" icon="message" href="/dashboard/results/responding-to-findings">
+    How to write effective responses
+  </Card>
+  <Card title="Filtering & Searching" icon="filter" href="/dashboard/results/filtering-searching">
+    Find specific findings quickly
+  </Card>
+</CardGroup>

@@ -1,0 +1,137 @@
+---
+title: "Results & Review"
+description: "Analyze AI-generated findings and respond to review items"
+icon: "activity"
+---
+
+## What are Results?
+
+The Results section displays findings from AI-powered workflow executions. Here you can review issues, provide responses, and export reports.
+
+## Accessing Results
+
+Click **Results** in the sidebar to view all workflow execution results for your organization.
+
+[SCREENSHOT PLACEHOLDER: Results page showing list of completed reviews]
+
+## Results Components
+
+### Execution List
+View all completed workflow executions:
+- Workflow name
+- Project reviewed
+- Execution date
+- Status (Pending or Closed)
+- Number of findings
+
+### Finding Details
+For each execution, see:
+- Workflow items that were checked
+- AI-generated findings for each item
+- Severity levels (Critical, Major, Warning, Pass, Inconclusive)
+- Document references with page numbers
+- Detailed explanations
+
+### Response Interface
+Respond to findings:
+- Add your response or comments
+- Mark items as addressed
+- Track which items still need attention
+
+## Severity Levels
+
+Findings are categorized by severity:
+
+<CardGroup cols={3}>
+  <Card title="Critical" icon="octagon-x" color="#dc2626">
+    Urgent issues requiring immediate attention
+  </Card>
+  <Card title="Major" icon="triangle-exclamation" color="#f59e0b">
+    Significant issues that should be addressed
+  </Card>
+  <Card title="Warning" icon="circle-exclamation" color="#3b82f6">
+    Items to review and consider
+  </Card>
+  <Card title="Pass" icon="circle-check" color="#10b981">
+    Items that meet requirements
+  </Card>
+  <Card title="Inconclusive" icon="circle-minus" color="#6b7280">
+    Items where the AI couldn't determine compliance
+  </Card>
+</CardGroup>
+
+See [Severity Levels](/dashboard/results/severity-levels) for detailed descriptions.
+
+## Working with Results
+
+<Steps>
+  <Step title="Select an Execution">
+    Click on a workflow execution from the results list.
+  </Step>
+  <Step title="Review Findings">
+    Read through the AI-generated findings for each workflow item.
+  </Step>
+  <Step title="Check Document References">
+    Click on document reference chips to view specific pages.
+  </Step>
+  <Step title="Provide Responses">
+    Add your response, explanation, or action plan for each finding.
+  </Step>
+  <Step title="Submit Responses">
+    Save your responses as you work through the review.
+  </Step>
+  <Step title="Export Results">
+    Download an Excel report of findings and responses.
+  </Step>
+</Steps>
+
+## Key Features
+
+### Document References
+Findings include clickable references to specific documents and page numbers, making it easy to verify the AI's observations.
+
+### Filtering & Search
+Filter results by:
+- Severity level
+- Category or tag
+- Status (Pending vs Closed)
+- Workflow item
+
+### Status Tracking
+Track which findings have been addressed:
+- **Pending** - Not yet responded to
+- **Closed** - Response submitted
+
+### Excel Export
+Export comprehensive reports including:
+- All findings and severities
+- Document references
+- Your responses
+- Workflow details
+
+[SCREENSHOT PLACEHOLDER: Review interface showing findings with severity badges and document references]
+
+## Review Workflow
+
+A typical review process:
+
+1. **Run a workflow** on project documents
+2. **Navigate to Results** to see findings
+3. **Review each finding** and check references
+4. **Respond** with explanations or action plans
+5. **Export to Excel** for reporting
+6. **Share** with team members or clients
+
+## Next Steps
+
+<CardGroup cols={3}>
+  <Card title="Review Interface" icon="computer" href="/dashboard/results/review-interface">
+    Learn about the review interface
+  </Card>
+  <Card title="Working with Findings" icon="search" href="/dashboard/results/working-with-findings">
+    How to analyze and respond to findings
+  </Card>
+  <Card title="Export Results" icon="download" href="/dashboard/results/exporting-results">
+    Generate Excel reports
+  </Card>
+</CardGroup>

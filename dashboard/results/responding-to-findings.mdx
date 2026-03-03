@@ -1,0 +1,245 @@
+---
+title: "Responding to Findings"
+description: "Best practices for writing effective responses to review findings"
+icon: "message"
+---
+
+## Why Respond to Findings?
+
+Responses to findings serve multiple purposes:
+- Document design decisions and justifications
+- Track action items and resolutions
+- Communicate with team members
+- Create an audit trail for reviews
+- Provide explanations for clients or reviewers
+
+## How to Respond
+
+<Steps>
+  <Step title="Select a Finding">
+    Click on a finding from the results list.
+  </Step>
+  <Step title="Review the Finding">
+    Read the AI's explanation and check document references.
+  </Step>
+  <Step title="Type Your Response">
+    Enter your response in the text area.
+  </Step>
+  <Step title="Submit">
+    Click "Submit Response" to save.
+  </Step>
+</Steps>
+
+[SCREENSHOT PLACEHOLDER: Response text area with submit button]
+
+## Response Content
+
+### What to Include
+
+A good response typically includes:
+- **Acknowledgment** - Confirm you've reviewed the finding
+- **Assessment** - Your determination (valid issue, false positive, needs investigation)
+- **Action** - What will be done (fix, no action needed, clarification)
+- **Details** - Specifics about the resolution or reasoning
+- **Attribution** - Your initials and date (optional but helpful)
+
+### Response Template
+
+```
+[Acknowledgment of issue]
+[Your assessment]
+[Action being taken or reasoning]
+[Relevant details]
+- [Your initials], [Date]
+```
+
+## Response Examples by Severity
+
+### Critical Finding Response
+
+**Finding:** Exit door D-101 is 32" wide, does not meet IBC 1010.1.1 minimum 36" requirement.
+
+**Response:**
+```
+Confirmed - this is a code violation that must be corrected.
+Action: Revising door D-101 to 36" wide on drawings A-101 and A-102.
+Updated door schedule will be included in next submission.
+- JD, 2024-01-15
+```
+
+---
+
+### Major Finding Response
+
+**Finding:** Beam size B12 shows as W16x31 on structural drawings but W16x26 in calculations.
+
+**Response:**
+```
+Reviewed both documents. The calculation is correct - W16x26
+is adequate. The drawing has an error.
+Action: Updating drawing S-201 to show W16x26 to match calculations.
+No structural change required.
+- MS, 2024-01-15
+```
+
+---
+
+### Warning Response (Action Taken)
+
+**Finding:** Consider specifying high-efficiency HVAC units to exceed minimum energy code requirements.
+
+**Response:**
+```
+Agreed - this is a good optimization opportunity.
+Action: Updating mechanical specifications to require SEER 16
+units instead of code minimum SEER 14. This aligns with owner's
+sustainability goals.
+- RK, 2024-01-15
+```
+
+---
+
+### Warning Response (No Action)
+
+**Finding:** Foundation depth of 6 feet may be excessive for given soil conditions.
+
+**Response:**
+```
+Reviewed with geotechnical engineer. 6-foot depth is required
+to reach bearing stratum per soils report section 4.2.
+Shallower depth would be in fill material.
+No change required.
+- JD, 2024-01-15
+```
+
+---
+
+### Pass Response
+
+**Finding:** All exit doors meet IBC minimum 36" width requirement.
+
+**Response:**
+```
+Confirmed - no action needed.
+- JD, 2024-01-15
+```
+
+<Tip>
+For Pass findings, a simple acknowledgment is often sufficient. You may choose not to respond to every Pass item.
+</Tip>
+
+---
+
+### Inconclusive Response
+
+**Finding:** Could not locate seismic design category in uploaded documents.
+
+**Response:**
+```
+Seismic Design Category D is shown on drawing S-001, General Notes,
+Note 3. This may not have been captured in the AI's analysis.
+Confirmed SDC D is correct per site location and building use.
+No action needed.
+- MS, 2024-01-15
+```
+
+## Response Best Practices
+
+<AccordionGroup>
+  <Accordion title="Be Specific">
+    Include specific drawing numbers, page references, section numbers, or other details that help others understand your response.
+  </Accordion>
+  <Accordion title="Action-Oriented">
+    Clearly state what action is being taken (or why no action is needed).
+  </Accordion>
+  <Accordion title="Professional Tone">
+    Write responses that could be shared with clients or external reviewers.
+  </Accordion>
+  <Accordion title="Include Reasoning">
+    When disagreeing with a finding or taking no action, explain why.
+  </Accordion>
+  <Accordion title="Add Attribution">
+    Include your initials and date so team members know who responded and when.
+  </Accordion>
+  <Accordion title="Keep It Concise">
+    Provide enough detail to be useful, but don't write excessively long responses.
+  </Accordion>
+</AccordionGroup>
+
+## Collaborative Responses
+
+### Team Reviews
+When multiple team members are reviewing:
+- Assign findings to appropriate discipline leads
+- Each person responds in their area of expertise
+- Coordinate on interdisciplinary items
+
+### Version Control
+If updating documents based on findings:
+- Reference the new drawing/document version in your response
+- Note the date of the update
+- Track which revision addresses which findings
+
+### Follow-up Reviews
+After addressing findings:
+- Consider re-running the workflow on updated documents
+- Verify that changes resolved the Critical/Major items
+- Document the verification in your response
+
+## Common Response Scenarios
+
+### False Positive
+When the AI incorrectly flagged something as an issue:
+```
+This is a false positive. The required information is present
+on drawing M-301, detail 5/M-301. The system may not have
+recognized this detail reference.
+No action required.
+```
+
+### Information Not in Scope
+When a finding relates to something outside the current scope:
+```
+This item is not part of the current design scope. Per contract,
+landscaping will be designed by landscape architect.
+Not applicable to this review.
+```
+
+### Deferred Item
+When an issue will be addressed later:
+```
+Acknowledged. This detail will be developed during shop
+drawing phase per specification section 05 12 00.
+Noted for tracking during construction phase.
+```
+
+## Response Status
+
+Submitting a response typically changes the finding's status from "Pending" to "Closed" or similar, helping you track progress through the review.
+
+Use status filters to:
+- See which findings still need responses
+- Review all completed items
+- Track your progress
+
+[SCREENSHOT PLACEHOLDER: Findings filtered by Pending status]
+
+## Exporting Responses
+
+Responses are included in Excel exports:
+- Response column shows your text
+- Export includes timestamp
+- Share with stakeholders
+
+See [Exporting Results](/dashboard/results/exporting-results) for details.
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Filtering & Searching" icon="filter" href="/dashboard/results/filtering-searching">
+    Find specific findings to respond to
+  </Card>
+  <Card title="Exporting Results" icon="download" href="/dashboard/results/exporting-results">
+    Export findings and responses to Excel
+  </Card>
+</CardGroup>

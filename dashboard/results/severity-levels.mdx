@@ -1,0 +1,223 @@
+---
+title: "Severity Levels"
+description: "Understanding finding severity classifications"
+icon: "signal"
+---
+
+## Overview
+
+Design IQ categorizes findings into five severity levels based on the significance and urgency of the issue. This helps you prioritize your review and focus on the most important items first.
+
+## Severity Levels
+
+### Critical
+
+<Card title="Critical" icon="octagon-x" color="#dc2626">
+  Urgent issues that represent serious problems requiring immediate attention and resolution.
+</Card>
+
+**Indicates:**
+- Code violations that could prevent approval
+- Safety hazards
+- Structural inadequacies or failures
+- Missing required building systems
+- Non-compliance with mandatory regulations
+
+**Examples:**
+- "Exit door width of 32" does not meet IBC minimum 36" requirement"
+- "Structural connection capacity is 15% below required strength"
+- "Fire-rated assembly missing required fire-stopping details"
+
+**Required Action:**
+Address immediately. These findings typically require design changes or additional documentation.
+
+---
+
+### Major
+
+<Card title="Major" icon="triangle-exclamation" color="#f59e0b">
+  Significant issues that should be addressed but may not be immediately critical.
+</Card>
+
+**Indicates:**
+- Important design inconsistencies
+- Calculation errors or omissions
+- Conflicts between documents
+- Missing important information
+- Non-compliance with recommended practices
+
+**Examples:**
+- "Beam size on structural drawings doesn't match size in calculations"
+- "Energy model shows U-value that exceeds energy code target by 10%"
+- "Plumbing fixture count is below recommended minimum for occupancy"
+
+**Required Action:**
+Should be addressed during design development. May require coordination or clarification.
+
+---
+
+### Warning
+
+<Card title="Warning" icon="circle-exclamation" color="#3b82f6">
+  Items that warrant review and consideration but may not require changes.
+</Card>
+
+**Indicates:**
+- Potential optimizations
+- Best practice suggestions
+- Items to review for appropriateness
+- Possible improvements
+- Areas needing clarification
+
+**Examples:**
+- "Consider using higher efficiency HVAC equipment to exceed minimum code"
+- "Foundation depth may be excessive for given soil conditions"
+- "Specify concrete strength verification for critical members"
+
+**Required Action:**
+Review and determine if changes are warranted based on engineering judgment and project requirements.
+
+---
+
+### Pass
+
+<Card title="Pass" icon="circle-check" color="#10b981">
+  Items that meet requirements and comply with applicable standards.
+</Card>
+
+**Indicates:**
+- Confirmed compliance
+- Proper design per standards
+- Adequate calculations
+- Complete and correct documentation
+- Requirements satisfied
+
+**Examples:**
+- "All exit doors meet IBC minimum 36" width requirement"
+- "Structural connection capacity exceeds required strength by 25%"
+- "Insulation R-values meet ASHRAE 90.1 requirements for climate zone"
+
+**Required Action:**
+No action needed. These confirmations provide assurance that requirements are met.
+
+---
+
+### Inconclusive
+
+<Card title="Inconclusive" icon="circle-minus" color="#6b7280">
+  Items where the AI could not determine compliance or non-compliance.
+</Card>
+
+**Indicates:**
+- Insufficient information in uploaded documents
+- Ambiguous or unclear requirements
+- Missing reference documents
+- Complex items requiring human judgment
+- Information exists but AI couldn't locate it
+
+**Examples:**
+- "Could not locate seismic design category in uploaded documents"
+- "Insufficient detail in drawings to verify connection bolt spacing"
+- "Reference standard for this check was not included in document set"
+
+**Required Action:**
+Investigate further. The information may be present but not found by the AI, or may need to be added to the documents.
+
+## Severity Distribution
+
+A typical workflow execution might show:
+- **5-15%** Critical - Serious issues requiring action
+- **15-30%** Major - Important items to address
+- **20-40%** Warning - Items to review
+- **30-50%** Pass - Confirmed compliance
+- **5-15%** Inconclusive - Needs investigation
+
+The exact distribution depends on document quality and project complexity.
+
+## Visual Indicators
+
+Severity levels use color coding and icons for quick identification:
+
+| Severity | Color | Icon | Badge Example |
+|----------|-------|------|---------------|
+| Critical | Red | Octagon-X | 🔴 CRITICAL |
+| Major | Orange/Amber | Triangle-Exclamation | 🟠 MAJOR |
+| Warning | Blue | Circle-Exclamation | 🔵 WARNING |
+| Pass | Green | Circle-Check | 🟢 PASS |
+| Inconclusive | Gray | Circle-Minus | ⚪ INCONCLUSIVE |
+
+[SCREENSHOT PLACEHOLDER: Findings list showing various severity badges]
+
+## Filtering by Severity
+
+Use severity filters to focus your review:
+
+```
+Filter: Critical + Major
+Result: See only high-priority items requiring action
+```
+
+```
+Filter: Warning + Inconclusive
+Result: Items needing review or investigation
+```
+
+```
+Filter: Pass
+Result: Confirmed compliant items (useful for reporting)
+```
+
+## Severity in Exported Reports
+
+Excel exports include severity levels:
+- Severity column for sorting and filtering
+- Color-coded cells matching the dashboard
+- Count of findings by severity
+- Summary statistics
+
+This makes it easy to share results with stakeholders and track issues.
+
+## Understanding Severity Context
+
+### Project Phase
+Severity interpretation may vary by project phase:
+- **Schematic Design** - Warnings more acceptable
+- **Construction Documents** - Criticals must be resolved
+
+### Workflow Purpose
+Different workflows may emphasize different severities:
+- **Code Compliance** - Focus on Critical/Major
+- **Optimization** - Focus on Warning
+- **QA Check** - All severities important
+
+## Best Practices
+
+<Check>
+**Prioritize Critical Items** - Always address Critical findings first.
+</Check>
+
+<Check>
+**Don't Ignore Warnings** - Review Warning items; they often lead to better designs.
+</Check>
+
+<Check>
+**Investigate Inconclusive** - These may indicate missing information or documentation gaps.
+</Check>
+
+<Check>
+**Document Pass Items** - Confirmed compliance is valuable for reviews and approvals.
+</Check>
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Working with Findings" icon="search" href="/dashboard/results/working-with-findings">
+    Learn how to analyze findings by severity
+  </Card>
+  <Card title="Filtering & Searching" icon="filter" href="/dashboard/results/filtering-searching">
+    Filter results by severity level
+  </Card>
+  <Card title="Responding to Findings" icon="message" href="/dashboard/results/responding-to-findings">
+    How to respond based on severity
+  </Card>
+</CardGroup>

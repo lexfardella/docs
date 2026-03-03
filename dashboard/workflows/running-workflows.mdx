@@ -1,0 +1,160 @@
+---
+title: "Running Workflows"
+description: "Execute AI-powered reviews on your documents"
+icon: "play"
+---
+
+## How to Run a Workflow
+
+<Steps>
+  <Step title="Navigate to Workflows">
+    Click **Workflows** in the sidebar.
+  </Step>
+  <Step title="Select a Workflow">
+    Choose the workflow you want to execute from the list.
+  </Step>
+  <Step title="Choose a Project">
+    Select which project's documents you want to review.
+  </Step>
+  <Step title="Select Documents">
+    Choose which documents to include in the review (project and/or organization documents).
+  </Step>
+  <Step title="Run the Workflow">
+    Click "Run" or "Execute" to start the AI review.
+  </Step>
+  <Step title="Wait for Processing">
+    The AI will analyze your documents against the workflow items.
+  </Step>
+  <Step title="View Results">
+    Navigate to the Results section to review findings.
+  </Step>
+</Steps>
+
+[SCREENSHOT PLACEHOLDER: Run workflow modal showing project and document selection]
+
+## Document Selection
+
+When running a workflow, you select which documents the AI should analyze.
+
+### Project Documents
+Choose from documents uploaded to the selected project:
+- Select specific documents (e.g., only structural drawings)
+- Select all project documents
+- Mix and match as needed
+
+### Organization Documents
+Optionally include organization-level documents as reference context:
+- Design standards
+- Building codes
+- Company guidelines
+
+The AI will use organization documents to inform its review and check compliance.
+
+### Selection Tips
+
+<Tip>
+**Include Relevant Standards** - Add organization documents (like building codes) to provide context for compliance checks.
+</Tip>
+
+<Tip>
+**Select Complete Sets** - Include all related drawings and specifications for comprehensive reviews.
+</Tip>
+
+## Execution Process
+
+Once you click "Run":
+
+1. **Queueing** - Your workflow execution is queued
+2. **Document Analysis** - AI processes selected documents
+3. **Item Evaluation** - Each workflow item is checked
+4. **Finding Generation** - Issues and observations are identified
+5. **Results Ready** - Navigate to Results to view findings
+
+### Processing Time
+
+Workflow execution time varies based on:
+- Number of documents selected
+- Size and complexity of documents
+- Number of workflow items
+- Current system load
+
+Typical execution times range from a few minutes to 30+ minutes for large document sets.
+
+## Monitoring Progress
+
+While a workflow runs:
+- You can navigate away and return later
+- Check the Workflows or Results section for status updates
+- You may receive notifications when execution completes
+
+[SCREENSHOT PLACEHOLDER: Workflow execution progress indicator]
+
+## After Execution
+
+Once complete:
+
+1. Navigate to **Results** in the sidebar
+2. Select the completed workflow execution
+3. Review findings organized by workflow item
+4. Respond to findings as needed
+5. Export results to Excel
+
+See [Results Overview](/dashboard/results/index) for detailed guidance on reviewing findings.
+
+## Running Workflows Multiple Times
+
+You can run the same workflow on:
+- Different projects
+- Different document sets
+- Updated document versions
+
+Each execution creates a separate set of results, allowing you to:
+- Track changes over time
+- Compare different projects
+- Review design iterations
+
+## Workflow Execution Best Practices
+
+<AccordionGroup>
+  <Accordion title="Test with Small Document Sets First">
+    Run your workflow on a small set of documents initially to verify it works as expected.
+  </Accordion>
+  <Accordion title="Include All Relevant Context">
+    Select all documents and standards needed for the AI to perform accurate reviews.
+  </Accordion>
+  <Accordion title="Use Consistent Document Sets">
+    When comparing results, use the same document selection for consistency.
+  </Accordion>
+  <Accordion title="Review and Refine">
+    After viewing results, refine your workflow items for better future results.
+  </Accordion>
+</AccordionGroup>
+
+## Troubleshooting
+
+### Execution Fails
+- Verify all selected documents processed successfully
+- Check that workflow has valid items
+- Try with fewer documents
+- Contact support if issues persist
+
+### Results Take Too Long
+- Large document sets may take significant time
+- Check workflow status or refresh the page
+- Consider breaking into smaller reviews
+
+### No Results Generated
+- Ensure workflow items are properly configured
+- Verify documents contain relevant content
+- Check that documents are text-searchable (not just images)
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Review Results" icon="activity" href="/dashboard/results/index">
+    Learn how to analyze review findings
+  </Card>
+  <Card title="Workflow Page" icon="file-text" href="/dashboard/workflows/workflow-page">
+    Understand the workflow detail page
+  </Card>
+</CardGroup>

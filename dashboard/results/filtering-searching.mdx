@@ -1,0 +1,246 @@
+---
+title: "Filtering & Searching"
+description: "Find specific findings quickly using filters and search"
+icon: "filter"
+---
+
+## Overview
+
+The Results section provides powerful filtering and search tools to help you navigate large sets of findings and focus on what matters most.
+
+## Available Filters
+
+### Severity Filter
+Filter findings by severity level:
+- **Critical** - Show only critical issues
+- **Major** - Show major issues
+- **Warning** - Show warnings
+- **Pass** - Show compliant items
+- **Inconclusive** - Show inconclusive items
+- **Multiple selections** - Combine severities (e.g., Critical + Major)
+
+[SCREENSHOT PLACEHOLDER: Severity filter dropdown with checkboxes]
+
+### Category Filter
+Filter by workflow item categories:
+- Structural
+- Mechanical
+- Electrical
+- Plumbing
+- Fire & Life Safety
+- Accessibility
+- Energy
+- Other custom categories
+
+### Tag Filter
+Filter by specific tags:
+- Code sections
+- Element types
+- Project phases
+- Custom tags from workflow items
+
+### Status Filter
+Filter by response status:
+- **Pending** - Findings without responses
+- **Closed** - Findings with submitted responses
+- **All** - Show everything
+
+## Using Filters
+
+<Steps>
+  <Step title="Open Filter Controls">
+    Look for filter buttons or dropdowns in the Results interface.
+  </Step>
+  <Step title="Select Filter Criteria">
+    Check boxes or select options for the filters you want to apply.
+  </Step>
+  <Step title="Apply Filters">
+    Filters typically apply automatically or require clicking "Apply."
+  </Step>
+  <Step title="View Filtered Results">
+    The findings list updates to show only matching items.
+  </Step>
+  <Step title="Clear Filters">
+    Click "Clear" or deselect all options to return to the full list.
+  </Step>
+</Steps>
+
+## Common Filter Combinations
+
+### High-Priority Items Only
+```
+Filter: Critical + Major
+Result: Focus on issues requiring immediate attention
+```
+
+### Unresponded Items
+```
+Filter: Status = Pending
+Result: See which findings still need your response
+```
+
+### Specific Discipline
+```
+Filter: Category = Structural
+Result: Review all structural findings together
+```
+
+### Code Compliance Issues
+```
+Filter: Tags = IBC, ASCE7, ACI318 (or similar code tags)
+Result: Focus on code-related findings
+```
+
+### Items to Review
+```
+Filter: Warning + Inconclusive
+Result: Items needing judgment or investigation
+```
+
+[SCREENSHOT PLACEHOLDER: Filters applied showing filtered count (e.g., "Showing 12 of 87 findings")]
+
+## Search Functionality
+
+### Keyword Search
+Search for specific terms in:
+- Workflow item text
+- Finding explanations
+- Document names
+- Your responses
+
+### Search Tips
+
+<Tabs>
+  <Tab title="Specific Terms">
+    Search for specific elements:
+    - `beam` - Find all findings mentioning beams
+    - `IBC 1010` - Find findings referencing this code section
+    - `door` - Find door-related findings
+  </Tab>
+  <Tab title="Phrases">
+    Use quotes for exact phrases:
+    - `"exit width"` - Find this exact phrase
+    - `"connection capacity"` - Specific term combinations
+  </Tab>
+  <Tab title="Document Names">
+    Search by document:
+    - `S-201` - Find findings referencing this drawing
+    - `Structural Calculations` - Find calc-related findings
+  </Tab>
+</Tabs>
+
+### Combining Search and Filters
+
+Use search and filters together for precise results:
+```
+Search: "connection"
+Filter: Category = Structural, Severity = Critical
+Result: Critical structural connection findings
+```
+
+## Sorting Results
+
+### Sort Options
+Sort findings by:
+- **Severity** - Critical first, then Major, Warning, Pass, Inconclusive
+- **Category** - Group by discipline or area
+- **Status** - Pending first, then Closed
+- **Workflow Item Order** - Original checklist sequence
+
+### Sort Direction
+Toggle ascending/descending:
+- Severity high-to-low or low-to-high
+- Alphabetical A-Z or Z-A
+- Status Pending-first or Closed-first
+
+[SCREENSHOT PLACEHOLDER: Sort dropdown or column headers]
+
+## Filter Management
+
+### Save Filter Settings
+Some interfaces allow you to save commonly-used filter combinations for quick access.
+
+### Clear All Filters
+Reset to view all findings:
+1. Click "Clear Filters" or "Reset"
+2. All items reappear in the list
+
+### Filter Counts
+Many interfaces show counts:
+```
+Critical (8) | Major (15) | Warning (23) | Pass (35) | Inconclusive (6)
+```
+
+Click a count to quickly filter to that severity.
+
+## Advanced Filtering Techniques
+
+### Multi-Level Filtering
+Apply multiple filters to narrow down:
+```
+1. Filter: Category = Structural
+2. Then: Severity = Critical + Major
+3. Then: Status = Pending
+Result: High-priority structural items needing response
+```
+
+### Negative Filtering
+Some interfaces support excluding items:
+```
+Filter: All except Pass
+Result: Show only items that need attention
+```
+
+### Date-Based Filtering
+If available, filter by:
+- Execution date
+- Response date
+- Last updated
+
+## Best Practices
+
+<AccordionGroup>
+  <Accordion title="Start Broad, Then Narrow">
+    Begin with a broad view, then progressively apply filters to focus on specific items.
+  </Accordion>
+  <Accordion title="Use Status to Track Progress">
+    Filter by Pending status to see what still needs your attention.
+  </Accordion>
+  <Accordion title="Combine Severity and Category">
+    Focus on high-severity items in your discipline (e.g., Critical + Structural).
+  </Accordion>
+  <Accordion title="Search for Specific Elements">
+    When looking for findings about a particular component, use keyword search.
+  </Accordion>
+  <Accordion title="Clear Filters Between Sessions">
+    Reset filters when starting a new review session to ensure you see all items.
+  </Accordion>
+</AccordionGroup>
+
+## Troubleshooting
+
+### No Results Shown
+- Check if filters are too restrictive
+- Clear all filters and try again
+- Verify the workflow execution completed successfully
+
+### Missing Findings
+- Ensure you're viewing the correct workflow execution
+- Check that filters aren't hiding items
+- Refresh the page
+
+### Search Not Working
+- Try simpler search terms
+- Check spelling
+- Use partial words if searching for variations
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Working with Findings" icon="search" href="/dashboard/results/working-with-findings">
+    Analyze filtered findings effectively
+  </Card>
+  <Card title="Exporting Results" icon="download" href="/dashboard/results/exporting-results">
+    Export filtered results to Excel
+  </Card>
+</CardGroup>

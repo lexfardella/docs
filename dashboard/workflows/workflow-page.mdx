@@ -1,0 +1,162 @@
+---
+title: "Workflow Detail Page"
+description: "Navigate and manage individual workflows"
+icon: "file-text"
+---
+
+## Accessing the Workflow Page
+
+The workflow detail page is accessed when you click on a specific workflow from the Workflows list. The URL follows the pattern:
+
+```
+/dashboard/[orgId]/workflows/[workflowId]
+```
+
+## Workflow Page Overview
+
+The workflow detail page displays comprehensive information about a single workflow.
+
+[SCREENSHOT PLACEHOLDER: Workflow detail page showing workflow name, items, and actions]
+
+## Page Components
+
+### Workflow Header
+Displays:
+- Workflow name
+- Description
+- Creation date and author (if available)
+- Edit and delete buttons
+
+### Workflow Items List
+Shows all checklist items in the workflow:
+- Item text/question
+- Categories and tags
+- Order or sequence
+- Edit/delete actions for each item
+
+### Actions Section
+Buttons and controls for:
+- **Run Workflow** - Execute this workflow on documents
+- **Edit Workflow** - Modify name, description
+- **Add Item** - Create new checklist items
+- **Delete Workflow** - Remove the entire workflow
+
+### Execution History
+View past executions of this workflow:
+- Date and time of execution
+- Project and documents reviewed
+- Link to results
+- Execution status
+
+## Managing Workflow Items
+
+From the workflow page, you can:
+
+### Add Items
+1. Click "Add Item" or "Create Checklist Item"
+2. Enter the review question
+3. Assign category and tags
+4. Save the new item
+
+### Edit Items
+1. Click the edit button on an item
+2. Modify the question, category, or tags
+3. Save changes
+
+### Delete Items
+1. Click the delete button on an item
+2. Confirm deletion
+3. The item is removed from the workflow
+
+### Reorder Items
+If supported, you can drag and drop items to reorder them logically.
+
+[SCREENSHOT PLACEHOLDER: Workflow items with edit/delete buttons]
+
+## Editing Workflow Details
+
+Click "Edit Workflow" to modify:
+- Workflow name
+- Workflow description
+- Other metadata or settings
+
+Changes apply to future executions but don't affect past results.
+
+## Running from the Workflow Page
+
+Click "Run Workflow" to:
+1. Open the execution modal
+2. Select a project
+3. Choose documents
+4. Start the AI review
+
+This is a convenient way to execute a workflow when you're already viewing its details.
+
+## Viewing Execution History
+
+The execution history section shows:
+- All past runs of this workflow
+- When each execution occurred
+- Which project and documents were reviewed
+- Links to view the results
+
+This helps you:
+- Track review history
+- Compare results over time
+- Access previous findings
+
+[SCREENSHOT PLACEHOLDER: Workflow execution history list]
+
+## Deleting a Workflow
+
+<Warning>
+Deleting a workflow removes the workflow and all its items. Past execution results are typically preserved but may lose their association with the workflow.
+</Warning>
+
+To delete:
+1. Click "Delete Workflow" or similar button
+2. Confirm you want to permanently delete
+3. The workflow is removed from your list
+
+## Workflow Page Best Practices
+
+<Check>
+**Keep Items Updated** - Regularly review and refine workflow items based on results.
+</Check>
+
+<Check>
+**Document Changes** - Update the workflow description when you make significant changes.
+</Check>
+
+<Check>
+**Review History** - Check execution history to understand how the workflow has been used.
+</Check>
+
+<Check>
+**Test After Edits** - Run the workflow on a small document set after making major changes.
+</Check>
+
+## Navigation Tips
+
+### Breadcrumbs
+Use breadcrumbs or the back button to return to the workflows list.
+
+### Sidebar Navigation
+The sidebar remains accessible for navigating to other sections (Projects, Data, Results).
+
+### Direct Links
+Bookmark or share the workflow page URL to access specific workflows directly.
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Workflow Items" icon="list-check" href="/dashboard/workflows/workflow-items">
+    Learn more about creating effective checklist items
+  </Card>
+  <Card title="Run Workflows" icon="play" href="/dashboard/workflows/running-workflows">
+    Execute your workflow on documents
+  </Card>
+  <Card title="View Results" icon="activity" href="/dashboard/results/index">
+    Analyze findings from workflow executions
+  </Card>
+</CardGroup>

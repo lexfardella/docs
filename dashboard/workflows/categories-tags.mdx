@@ -1,0 +1,190 @@
+---
+title: "Categories & Tags"
+description: "Organize workflow items for easier navigation and filtering"
+icon: "tags"
+---
+
+## Why Use Categories and Tags?
+
+Categories and tags help you organize workflow items, making it easier to:
+- Navigate large workflows
+- Filter results by topic
+- Find specific checks quickly
+- Group related review items
+
+## Categories
+
+Categories are high-level groupings for workflow items. They represent major disciplines or review areas.
+
+### Common Categories
+
+<CardGroup cols={2}>
+  <Card title="Structural" icon="building">
+    Loads, connections, materials, foundations
+  </Card>
+  <Card title="Mechanical" icon="wind">
+    HVAC systems, ductwork, equipment
+  </Card>
+  <Card title="Electrical" icon="bolt">
+    Power distribution, lighting, equipment
+  </Card>
+  <Card title="Plumbing" icon="droplet">
+    Piping, fixtures, drainage
+  </Card>
+  <Card title="Fire & Life Safety" icon="flame">
+    Exits, fire rating, suppression systems
+  </Card>
+  <Card title="Accessibility" icon="universal-access">
+    ADA compliance, accessible routes
+  </Card>
+  <Card title="Energy" icon="leaf">
+    Insulation, efficiency, energy code
+  </Card>
+  <Card title="General" icon="circle-info">
+    Cross-disciplinary or administrative items
+  </Card>
+</CardGroup>
+
+### Creating Categories
+
+Categories are typically created when adding workflow items. You can:
+- Select from existing categories
+- Create new categories as needed
+- Assign multiple categories to an item (if supported)
+
+### Category Best Practices
+
+<Check>
+**Consistent Naming** - Use the same category names across workflows for consistency.
+</Check>
+
+<Check>
+**Logical Groupings** - Categories should represent clear, distinct areas of review.
+</Check>
+
+<Check>
+**Not Too Many** - Limit to 5-10 categories per workflow to avoid over-complication.
+</Check>
+
+## Tags
+
+Tags provide additional, flexible metadata for workflow items. They're more specific than categories.
+
+### Common Tag Types
+
+**Code Sections**
+- `IBC-1010` - Building code sections
+- `ASCE7-Ch3` - Standard chapters
+- `ACI318-19.2` - Specification sections
+
+**Element Types**
+- `Beams`
+- `Columns`
+- `Connections`
+- `Foundations`
+
+**Review Phase**
+- `Schematic Design`
+- `Design Development`
+- `Construction Documents`
+
+**Priorities**
+- `Critical`
+- `High Priority`
+- `Optional`
+
+### Adding Tags
+
+When creating or editing a workflow item:
+1. Look for the tags field
+2. Enter tags (usually comma-separated or as individual entries)
+3. Tags may auto-complete from existing tags
+4. Save the item with tags applied
+
+[SCREENSHOT PLACEHOLDER: Workflow item form showing category and tags fields]
+
+### Tag Best Practices
+
+<Check>
+**Descriptive** - Use clear, meaningful tag names.
+</Check>
+
+<Check>
+**Consistent Format** - Standardize tag formatting (e.g., always use Title Case or lowercase).
+</Check>
+
+<Check>
+**Multiple Tags** - Apply several relevant tags to each item for flexible filtering.
+</Check>
+
+<Check>
+**Avoid Redundancy** - Don't duplicate information already in the category.
+</Check>
+
+## Using Categories and Tags for Filtering
+
+### In Workflow View
+Filter workflow items by category or tag to:
+- Focus on specific disciplines
+- Review items by code section
+- Prioritize certain checks
+
+### In Results View
+Filter review results by category or tag to:
+- See findings for a specific discipline
+- Group issues by code section
+- Focus on high-priority items
+
+[SCREENSHOT PLACEHOLDER: Results page with category/tag filters]
+
+## Examples of Well-Organized Items
+
+### Example 1: Structural Item
+```
+Category: Structural
+Tags: Connections, AISC-360, Bolts
+Item: "Verify that all beam-to-column connections have
+       sufficient bolt capacity per AISC 360-16 Table J3.2"
+```
+
+### Example 2: Accessibility Item
+```
+Category: Accessibility
+Tags: Doors, IBC-1010, ADA
+Item: "Confirm that all exit doors are minimum 36 inches
+       wide per IBC 1010.1.1"
+```
+
+### Example 3: Energy Item
+```
+Category: Energy
+Tags: Insulation, ASHRAE-90.1, Thermal Envelope
+Item: "Verify that wall insulation R-values meet the minimum
+       requirements of ASHRAE 90.1 Table 5.5-1 for climate zone"
+```
+
+## Managing Categories and Tags
+
+### Renaming Categories
+Some systems allow you to rename categories. This may update all items using that category.
+
+### Merging Tags
+If you've created duplicate or similar tags, you may be able to merge them for consistency.
+
+### Deleting Unused Categories/Tags
+Remove categories or tags that are no longer in use to keep your organization clean.
+
+<Warning>
+Deleting or renaming categories/tags may affect existing workflows and results. Proceed with caution.
+</Warning>
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Workflow Items" icon="list-check" href="/dashboard/workflows/workflow-items">
+    Learn more about creating workflow items
+  </Card>
+  <Card title="Results Filtering" icon="filter" href="/dashboard/results/filtering-searching">
+    Use categories and tags to filter results
+  </Card>
+</CardGroup>

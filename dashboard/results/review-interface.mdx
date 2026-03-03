@@ -1,0 +1,187 @@
+---
+title: "Review Interface"
+description: "Navigate the results review interface"
+icon: "computer"
+---
+
+## Review Interface Overview
+
+The review interface is where you analyze AI-generated findings and provide responses. It's accessed by clicking on a completed workflow execution in the Results section.
+
+[SCREENSHOT PLACEHOLDER: Full review interface showing findings list and detail panel]
+
+## Interface Components
+
+### Header Section
+Displays:
+- Workflow name
+- Project name
+- Execution date
+- Status (Pending/Closed)
+- Action buttons (Export, Refresh)
+
+### Findings List
+Shows all workflow items and their findings:
+- Workflow item text
+- Severity badge (Critical, Major, Warning, Pass, Inconclusive)
+- Finding summary
+- Document references
+- Response status
+
+### Detail Panel
+When you select a finding:
+- Full finding explanation
+- Document reference chips (clickable)
+- Response text area
+- Submit response button
+
+### Reference Panel
+When you click a document reference:
+- Document viewer (PDF, Excel, etc.)
+- Highlighted page or section
+- Navigation controls
+
+[SCREENSHOT PLACEHOLDER: Detail panel showing a selected finding with response area]
+
+## Navigating Findings
+
+### List View
+Scroll through the findings list to see all workflow items and their results.
+
+### Severity Badges
+Color-coded badges indicate severity at a glance:
+- 🔴 Critical - Red
+- 🟠 Major - Orange/Amber
+- 🔵 Warning - Blue
+- 🟢 Pass - Green
+- ⚪ Inconclusive - Gray
+
+### Filtering
+Use filter controls to narrow down findings:
+- Filter by severity level
+- Filter by category or tag
+- Filter by response status
+- Search by keyword
+
+[SCREENSHOT PLACEHOLDER: Filter dropdown showing severity and category options]
+
+## Document References
+
+Findings include reference "chips" that link to specific documents and pages.
+
+### Reference Chip Components
+Each chip shows:
+- Document name (truncated if long)
+- Page number (e.g., "p.12")
+- Document icon
+
+### Clicking References
+Click a reference chip to:
+1. Open the reference panel
+2. View the specific document page
+3. See the relevant context
+
+This makes it easy to verify the AI's findings by checking the source directly.
+
+[SCREENSHOT PLACEHOLDER: Document reference chips inline with finding text]
+
+## Response Interface
+
+### Adding a Response
+
+<Steps>
+  <Step title="Select a Finding">
+    Click on a finding from the list to view details.
+  </Step>
+  <Step title="Review the Finding">
+    Read the AI's explanation and check document references.
+  </Step>
+  <Step title="Enter Your Response">
+    Type your response, explanation, or action plan in the text area.
+  </Step>
+  <Step title="Submit">
+    Click "Submit Response" or similar button to save.
+  </Step>
+</Steps>
+
+### Response Content
+
+Your response might include:
+- Acknowledgment of the issue
+- Explanation of why it's not an issue
+- Action plan to address the finding
+- References to additional documentation
+- Questions for team members
+
+### Example Responses
+
+```
+Response to Critical Finding:
+"Confirmed - this connection capacity is insufficient.
+Will revise design to use (6) 7/8" bolts instead of (4).
+Updated calculations attached. - JD 2024-01-15"
+```
+
+```
+Response to Warning:
+"Reviewed the reference. This condition is acceptable
+per engineering judgment because the member is
+non-load-bearing. No action required."
+```
+
+## Status Tracking
+
+### Pending
+Findings without responses are marked as "Pending" and require attention.
+
+### Closed
+Once you submit a response, the finding status changes to "Closed" (or similar), indicating it's been addressed.
+
+### Filtering by Status
+Use status filters to:
+- See which findings still need responses
+- Review all closed items
+- Track progress through the review
+
+## Keyboard Navigation
+
+<Info>
+Some interfaces support keyboard shortcuts for faster navigation:
+- Arrow keys to move between findings
+- Enter to expand/collapse details
+- Tab to focus on response field
+</Info>
+
+Check the interface for available shortcuts.
+
+## Best Practices
+
+<Check>
+**Review Systematically** - Work through findings in order, filtering by severity if needed.
+</Check>
+
+<Check>
+**Verify References** - Always click document references to verify the AI's observations.
+</Check>
+
+<Check>
+**Provide Clear Responses** - Write detailed responses that others can understand.
+</Check>
+
+<Check>
+**Save Frequently** - Submit responses as you go rather than waiting until the end.
+</Check>
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Working with Findings" icon="search" href="/dashboard/results/working-with-findings">
+    Learn how to analyze findings effectively
+  </Card>
+  <Card title="Severity Levels" icon="signal" href="/dashboard/results/severity-levels">
+    Understand what each severity level means
+  </Card>
+  <Card title="Responding to Findings" icon="message" href="/dashboard/results/responding-to-findings">
+    Best practices for writing responses
+  </Card>
+</CardGroup>

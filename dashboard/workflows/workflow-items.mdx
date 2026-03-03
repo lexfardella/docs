@@ -1,0 +1,178 @@
+---
+title: "Workflow Items"
+description: "Create effective checklist items for AI-powered reviews"
+icon: "list-check"
+---
+
+## What are Workflow Items?
+
+Workflow items are individual checklist items within a workflow. Each item represents a specific check, question, or requirement that the AI will evaluate against your documents.
+
+## Creating a Workflow Item
+
+<Steps>
+  <Step title="Open a Workflow">
+    Navigate to Workflows and select the workflow you want to edit.
+  </Step>
+  <Step title="Click Add Item">
+    Look for the "Add Item" or "Create Checklist Item" button.
+  </Step>
+  <Step title="Write the Review Question">
+    Enter a clear, specific question or requirement for the AI to check.
+  </Step>
+  <Step title="Add Category and Tags">
+    Organize the item with relevant categories and tags.
+  </Step>
+  <Step title="Save">
+    Save the workflow item.
+  </Step>
+</Steps>
+
+[SCREENSHOT PLACEHOLDER: Create workflow item modal]
+
+## Writing Effective Workflow Items
+
+### Be Specific and Clear
+
+<Tabs>
+  <Tab title="Good Examples">
+    ✅ "Verify that all beam-to-column connections have sufficient bolt capacity per AISC 360-16 Table J3.2"
+
+    ✅ "Check that the HVAC supply air CFM meets the minimum ventilation requirements of ASHRAE 62.1"
+
+    ✅ "Confirm that seismic design category is correctly identified based on site location and building use"
+  </Tab>
+  <Tab title="Avoid">
+    ❌ "Check connections" (too vague)
+
+    ❌ "Review HVAC" (not specific enough)
+
+    ❌ "Is seismic okay?" (unclear criteria)
+  </Tab>
+</Tabs>
+
+### Include Reference Standards
+
+When applicable, cite the specific code, standard, or section:
+
+```
+Verify that concrete strength (f'c) used in calculations
+matches the structural drawings and meets the minimum
+requirements of ACI 318-19 Table 19.2.1.1
+```
+
+### Make Items Measurable
+
+Write items that have clear pass/fail criteria:
+
+- ✅ "Confirm that all exit doors are minimum 36 inches wide per IBC 1010.1.1"
+- ❌ "Make sure doors are okay"
+
+## Item Components
+
+Each workflow item typically includes:
+
+### The Question or Requirement
+The main review check that the AI will evaluate.
+
+### Category
+A high-level grouping for the item (e.g., "Structural", "Fire Safety", "Accessibility").
+
+### Tags
+Additional metadata for filtering and organization (e.g., "Connections", "Code Compliance", "Calculations").
+
+## Types of Workflow Items
+
+### Compliance Checks
+Verify adherence to codes and standards:
+```
+Verify that stair tread depth is minimum 11 inches
+and riser height is maximum 7 inches per IBC 1011.5.2
+```
+
+### Calculation Verification
+Check engineering calculations:
+```
+Verify that the dead load calculations include all
+permanent building components per ASCE 7-16 Section 3.1
+```
+
+### Completeness Checks
+Ensure all required information is present:
+```
+Confirm that all structural drawings include a general
+notes sheet with design criteria, loads, and material specifications
+```
+
+### Coordination Checks
+Verify consistency across documents:
+```
+Check that the foundation loads shown on the architectural
+foundation plan match the loads in the structural calculations
+```
+
+## Organizing Workflow Items
+
+### Use Categories
+Group related items:
+- **Structural** - Loads, Connections, Materials
+- **Fire & Life Safety** - Exits, Fire Rating, Sprinklers
+- **Accessibility** - Doors, Ramps, Restrooms
+- **Energy** - Insulation, HVAC Efficiency, Lighting
+
+### Apply Tags
+Add specific tags for filtering:
+- Code sections (e.g., "IBC-1010", "ASCE7-Chapter3")
+- Element types (e.g., "Beams", "Columns", "Slabs")
+- Review phases (e.g., "SD", "DD", "CD")
+
+[SCREENSHOT PLACEHOLDER: Workflow items list with categories and tags]
+
+## Best Practices
+
+<Check>
+**One Check Per Item** - Each workflow item should focus on a single, specific requirement.
+</Check>
+
+<Check>
+**Actionable Language** - Use verbs like "Verify", "Check", "Confirm", "Ensure".
+</Check>
+
+<Check>
+**Include Context** - Reference specific code sections or standards when applicable.
+</Check>
+
+<Check>
+**Logical Order** - Arrange items in a logical sequence (e.g., general to specific, or following document order).
+</Check>
+
+## Editing Workflow Items
+
+To edit an existing workflow item:
+1. Navigate to the workflow
+2. Find the item in the list
+3. Click edit or modify
+4. Update the item details
+5. Save changes
+
+## Deleting Workflow Items
+
+To remove a workflow item:
+1. Locate the item in the workflow
+2. Click delete or remove
+3. Confirm deletion
+
+<Warning>
+Deleting workflow items does not affect past review results, but the item will not appear in future executions.
+</Warning>
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Categories & Tags" icon="tags" href="/dashboard/workflows/categories-tags">
+    Learn how to organize items with categories and tags
+  </Card>
+  <Card title="Run a Workflow" icon="play" href="/dashboard/workflows/running-workflows">
+    Execute a workflow with your items
+  </Card>
+</CardGroup>

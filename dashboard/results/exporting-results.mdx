@@ -1,0 +1,241 @@
+---
+title: "Exporting Results"
+description: "Generate Excel reports of findings and responses"
+icon: "download"
+---
+
+## Overview
+
+Design IQ allows you to export workflow results to Excel, creating comprehensive reports that include findings, responses, document references, and metadata.
+
+## How to Export
+
+<Steps>
+  <Step title="Navigate to Results">
+    Click **Results** in the sidebar.
+  </Step>
+  <Step title="Select a Workflow Execution">
+    Choose the completed review you want to export.
+  </Step>
+  <Step title="Click Export">
+    Look for the "Export to Excel" or download button.
+  </Step>
+  <Step title="Wait for Generation">
+    The system generates your Excel file.
+  </Step>
+  <Step title="Download">
+    Your browser downloads the Excel file automatically.
+  </Step>
+</Steps>
+
+[SCREENSHOT PLACEHOLDER: Export button in Results interface]
+
+## Export Contents
+
+### Included Information
+
+The Excel export typically includes:
+
+**Finding Details:**
+- Workflow item text
+- AI-generated finding/explanation
+- Severity level (Critical, Major, Warning, Pass, Inconclusive)
+- Category and tags
+
+**Document References:**
+- Referenced document names
+- Page numbers
+- Document IDs
+
+**Your Responses:**
+- Response text
+- Response timestamp
+- Response author (if tracked)
+
+**Metadata:**
+- Workflow name
+- Project name
+- Execution date
+- Organization name
+
+### Excel Structure
+
+Exports are typically organized as:
+- **One row per finding** - Each workflow item and its result
+- **Multiple columns** - Severity, Item, Finding, Response, References, etc.
+- **Color coding** - Severity levels color-coded (Critical=Red, Major=Orange, etc.)
+- **Filters enabled** - Excel filter dropdowns on header row
+- **Summary data** - Count of findings by severity
+
+[SCREENSHOT PLACEHOLDER: Sample Excel export showing rows and columns]
+
+## Using the Excel Export
+
+### Filtering in Excel
+The exported file has filters enabled, allowing you to:
+- Filter by severity
+- Filter by category
+- Filter by status
+- Sort by any column
+
+### Sharing with Stakeholders
+Excel exports are ideal for:
+- Client reviews
+- Project documentation
+- Internal design reviews
+- Submittal packages
+- Compliance documentation
+
+### Printing Reports
+Format the Excel file for printing:
+- Adjust column widths
+- Add company logo/header
+- Print specific severity levels only
+- Create summary pages
+
+## Export Customization
+
+### Applying Filters Before Export
+Some systems allow you to filter results before exporting:
+
+```
+1. Filter: Severity = Critical + Major
+2. Click Export
+3. Result: Excel contains only Critical and Major findings
+```
+
+This lets you create focused reports (e.g., "High Priority Items Only").
+
+### Including/Excluding Data
+Check if you can customize:
+- Which columns to include
+- Whether to include Pass findings
+- Document reference details
+- Response information
+
+## File Naming
+
+Exported files typically use naming conventions like:
+```
+[WorkflowName]_[ProjectName]_[Date].xlsx
+```
+
+Example:
+```
+Structural_Code_Review_Building_A_2024-01-15.xlsx
+```
+
+## Excel Export Use Cases
+
+### Code Review Submittal
+Export findings and responses to submit to building officials:
+- Shows what was checked
+- Documents compliance (Pass findings)
+- Explains how issues were addressed (responses)
+
+### Client Deliverable
+Provide clients with comprehensive review documentation:
+- Transparent review process
+- Clear communication of issues
+- Documented resolutions
+
+### Internal QA
+Use exports for quality assurance tracking:
+- Assign findings to team members
+- Track resolution status
+- Document design iterations
+
+### Project Archive
+Include exports in project archives:
+- Permanent record of reviews
+- Audit trail of design decisions
+- Reference for future projects
+
+[SCREENSHOT PLACEHOLDER: Excel export being shared via email or file system]
+
+## Advanced Excel Tips
+
+### Create Pivot Tables
+Use Excel pivot tables on exported data to:
+- Summarize findings by category
+- Count findings by severity
+- Analyze trends across projects
+
+### Conditional Formatting
+Enhance the export with:
+- Additional color coding
+- Icon sets for severity
+- Data bars for counts
+
+### Link to Documents
+If document paths are included, create hyperlinks to:
+- Jump directly to referenced documents
+- Open specific pages
+- Access full document sets
+
+## Export Limits
+
+<Info>
+Check with your organization administrator for any export limits, such as maximum file size or number of findings per export.
+</Info>
+
+## Troubleshooting Exports
+
+### Export Fails
+- Check your browser's download settings
+- Disable pop-up blockers
+- Try a different browser
+- Refresh and try again
+
+### File Won't Open
+- Ensure you have Excel or compatible software
+- Check that download completed fully
+- Try re-exporting
+
+### Missing Data
+- Verify you're exporting the correct workflow execution
+- Check if filters were applied before export
+- Ensure responses were submitted before exporting
+
+## Re-Exporting
+
+You can export the same results multiple times:
+- After adding new responses
+- With different filters applied
+- For different audiences
+- At different project stages
+
+Each export is a snapshot of the current state of findings and responses.
+
+## Best Practices
+
+<Check>
+**Export After Completing Responses** - Wait until you've responded to all findings for a complete record.
+</Check>
+
+<Check>
+**Descriptive Filenames** - Rename exported files with clear, descriptive names.
+</Check>
+
+<Check>
+**Version Control** - If exporting multiple times, include version or date in filename.
+</Check>
+
+<Check>
+**Archive Exports** - Save exports to project folders for future reference.
+</Check>
+
+<Check>
+**Review Before Sharing** - Open and review the Excel file before sending to external parties.
+</Check>
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Working with Findings" icon="search" href="/dashboard/results/working-with-findings">
+    Ensure all findings are reviewed before exporting
+  </Card>
+  <Card title="Responding to Findings" icon="message" href="/dashboard/results/responding-to-findings">
+    Complete responses for a comprehensive export
+  </Card>
+</CardGroup>

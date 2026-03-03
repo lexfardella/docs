@@ -1,0 +1,146 @@
+---
+title: "Creating Workflows"
+description: "Build custom review checklists for your design reviews"
+icon: "plus"
+---
+
+## Create a New Workflow
+
+<Steps>
+  <Step title="Navigate to Workflows">
+    Click **Workflows** in the sidebar.
+  </Step>
+  <Step title="Click Create Workflow">
+    Look for the "Create Workflow" or "+" button.
+  </Step>
+  <Step title="Enter Workflow Details">
+    Provide a name and description for your workflow.
+  </Step>
+  <Step title="Add Workflow Items">
+    Create checklist items that define what to review.
+  </Step>
+  <Step title="Save">
+    Save your workflow to make it available for execution.
+  </Step>
+</Steps>
+
+[SCREENSHOT PLACEHOLDER: Create workflow modal/form]
+
+## Workflow Naming
+
+Choose clear, descriptive workflow names that indicate:
+- The type of review (e.g., "Structural Code Compliance")
+- The discipline or scope (e.g., "MEP Systems Review")
+- The standard or code (e.g., "IBC 2021 Compliance Check")
+
+### Good Workflow Names
+- ✅ "Structural Steel Design Review - AISC 360"
+- ✅ "MEP Coordination Check"
+- ✅ "Energy Code Compliance - ASHRAE 90.1"
+- ✅ "Drawing Quality Assurance"
+
+### Avoid
+- ❌ "Workflow 1"
+- ❌ "Test"
+- ❌ "Review"
+
+## Workflow Description
+
+Write a clear description that explains:
+- The purpose of the workflow
+- What aspects will be reviewed
+- Which standards or codes apply
+- Who should use this workflow
+
+### Example Description
+```
+This workflow reviews structural steel connections for
+compliance with AISC 360-16. It checks bolt patterns,
+weld specifications, and connection capacity calculations.
+```
+
+## Adding Workflow Items
+
+After creating the workflow, add review items (checklist items):
+
+1. Click "Add Item" or similar button
+2. Enter the review question or requirement
+3. Assign categories and tags
+4. Save the item
+5. Repeat for each check in your review
+
+See [Workflow Items](/dashboard/workflows/workflow-items) for detailed guidance on creating effective checklist items.
+
+## Organizing Workflows
+
+### By Discipline
+Create separate workflows for different engineering disciplines:
+- Structural
+- Mechanical
+- Electrical
+- Plumbing
+- Architectural
+
+### By Project Phase
+Organize workflows by design phase:
+- Schematic Design Review
+- Design Development QA
+- Construction Document Review
+- Shop Drawing Review
+
+### By Code/Standard
+Create workflows for specific codes or standards:
+- IBC 2021 Compliance
+- ASCE 7 Load Review
+- NEC 2020 Electrical Check
+
+## Workflow Templates
+
+<Tip>
+Start with a template workflow and customize it for your specific needs. This saves time and ensures comprehensive reviews.
+</Tip>
+
+Common templates might include:
+- General structural review
+- MEP coordination checklist
+- Code compliance verification
+- Calculation review template
+
+## Best Practices
+
+<AccordionGroup>
+  <Accordion title="Start Simple">
+    Begin with a small workflow (5-10 items) and expand as you learn what works.
+  </Accordion>
+  <Accordion title="Be Specific">
+    Write clear, specific review items rather than vague questions.
+  </Accordion>
+  <Accordion title="Use Categories">
+    Organize items with categories for easier navigation and filtering.
+  </Accordion>
+  <Accordion title="Iterate">
+    Refine workflows based on results - add, remove, or modify items as needed.
+  </Accordion>
+</AccordionGroup>
+
+## After Creating a Workflow
+
+Once created, you can:
+1. Run the workflow on project documents
+2. Edit and refine workflow items
+3. Share the workflow with your team
+4. Duplicate and customize for similar reviews
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Add Workflow Items" icon="list-check" href="/dashboard/workflows/workflow-items">
+    Learn how to create effective checklist items
+  </Card>
+  <Card title="Categories & Tags" icon="tags" href="/dashboard/workflows/categories-tags">
+    Organize your workflow items
+  </Card>
+  <Card title="Run a Workflow" icon="play" href="/dashboard/workflows/running-workflows">
+    Execute your first review
+  </Card>
+</CardGroup>
