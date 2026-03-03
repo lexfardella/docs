@@ -76,10 +76,23 @@ pre {
   padding: 16px;
 }
 
-/* Minimal Scrollbars */
+/* Sidebar Width - wider to prevent text wrapping */
+aside,
+nav aside,
+[class*="sidebar"],
+[class*="Sidebar"],
+.docs-sidebar {
+  min-width: 280px !important;
+  max-width: 400px !important;
+  width: 280px !important;
+  resize: horizontal !important;
+  overflow: auto !important;
+}
+
+/* Minimal Scrollbars - matching globals.css minimal-scrollbar-default */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
 }
 
 ::-webkit-scrollbar-track {
@@ -87,15 +100,29 @@ pre {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: transparent;
-  border-radius: 4px;
-  transition: background 0.2s ease;
+  background: rgba(156, 163, 175, 0.2);
+  border-radius: 3px;
+  transition: background-color 0.2s ease;
 }
 
-*:hover::-webkit-scrollbar-thumb {
-  background: rgba(209, 213, 219, 0.5);
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(156, 163, 175, 0.4);
 }
 
-.dark *:hover::-webkit-scrollbar-thumb {
-  background: rgba(75, 85, 99, 0.5);
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(75, 85, 99, 0.2);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(75, 85, 99, 0.4);
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(156, 163, 175, 0.2) transparent;
+}
+
+.dark * {
+  scrollbar-color: rgba(75, 85, 99, 0.2) transparent;
 }
