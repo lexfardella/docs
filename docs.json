@@ -2,7 +2,7 @@
   "$schema": "https://mintlify.com/docs.json",
   "name": "Design IQ",
   "favicon": "/favicon.svg",
-  "customCss": "custom.css",
+  "customCss": "/custom.css",
   "navigation": {
     "tabs": [
       {
