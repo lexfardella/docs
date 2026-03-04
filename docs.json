@@ -2,7 +2,7 @@
   "$schema": "https://mintlify.com/docs.json",
   "name": "Design IQ",
   "favicon": "/favicon.svg",
-  "theme": "luma",
+  "theme": "sequoia",
   "customCss": "/custom.css",
   "colors": {
     "primary": "#7C3AED",
